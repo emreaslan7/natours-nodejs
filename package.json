@@ -4,7 +4,7 @@
   "description": "learning espress nodejs and mongoDB",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node api/index.js",
     "dev": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
