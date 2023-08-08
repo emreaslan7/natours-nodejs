@@ -6,6 +6,7 @@ const ratelimit = require('express-rate-limit');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const cors = require('cors');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const viewRouter = require('./routes/viewRoutes');
@@ -20,6 +21,9 @@ const app = express();
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
+
+app.use(cors());
+app.options('*', cors());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -55,6 +59,9 @@ const connectSrcUrls = [
   'https://*.mapbox.com/',
   'https://*.cloudflare.com',
   'http://127.0.0.1:3000',
+  'https://natours-nodejs-fuo6.onrender.com/',
+  'ws://localhost:51917/',
+  'wss://natours-nodejs-fuo6.onrender.com:51917/',
 ];
 
 const fontSrcUrls = ['fonts.googleapis.com', 'fonts.gstatic.com'];
