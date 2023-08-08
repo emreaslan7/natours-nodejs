@@ -58,7 +58,7 @@ const styleSrcUrls = [
 const connectSrcUrls = [
   'https://*.mapbox.com/',
   'https://*.cloudflare.com',
-  'http://127.0.0.1:3000',
+  // 'http://127.0.0.1:3000',
   'https://natours-nodejs-fuo6.onrender.com/',
   'ws://localhost:51917/',
   'wss://natours-nodejs-fuo6.onrender.com:51917/',
@@ -125,12 +125,6 @@ app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 // Serving static files
 
 // 2) ROUTE HANDLERS
-
-// app.get('/api/v1/tours', getAllTours);
-// app.get('/api/v1/tours/:id', getTour);
-// app.patch('/api/v1/tours/:id', updateTour);
-// app.post('/api/v1/tours', createTour);
-// app.delete('/api/v1/tours/:id', deleteTour);
 
 // 3) ROUTE
 

@@ -36,7 +36,7 @@ exports.getLogin = catchAsync(async (req, res, next) => {
     .set(
       'Content-Security-Policy',
       'Access-Control-Allow-Origin',
-      "connect-src 'self' http://localhost:3000/api/v1/users/login",
+      "connect-src 'self' /api/v1/users/login",
     )
     .render('login', {
       title: 'Log into your account',
